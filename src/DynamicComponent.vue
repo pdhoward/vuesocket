@@ -25,6 +25,7 @@ export default {
       computedComponent: null,
     };
   },
+  /*
   watch: {
     component: {
       immediate: true,
@@ -33,7 +34,8 @@ export default {
 
         this.computedComponent = () => externalComponent(this.component.url);
       },
-    },
+    },  
   },
+  */
 };
 </script>

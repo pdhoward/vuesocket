@@ -21,10 +21,13 @@ export default {
     this.fetch();
 
     // Listen for new data.
+    /*
     ws.onmessage = ({ data }) => {
-      const message = JSON.parse(data);
-      this[message.type.toLowerCase()](message.entity);
+      console.log(`Hello from FrameLive Feed`)
+      //const message = JSON.parse(data);
+     // this[message.type.toLowerCase()](message.entity);
     };
+    */
   },
   methods: {
     add(entity) {

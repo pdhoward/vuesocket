@@ -4,7 +4,7 @@
     :class="$style.main"
   >
     <h1>
-      Distributed Vue.js Applications Part 2: Pushing Content and Component Updates to the Client
+      Dynamic Content
     </h1>
     <NewsFeed/>
   </div>
