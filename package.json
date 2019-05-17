@@ -1,10 +1,9 @@
 {
-  "name": "distributed-vue-applications-pushing-content-and-component-updates-to-the-client",
-  "version": "0.1.0",
-  "author": "Markus Oberlehner",
-  "homepage": "https://github.com/maoberlehner/distributed-vue-applications-pushing-content-and-component-updates-to-the-client",
-  "license": "MIT",
-  "private": true,
+  "name": "vuesocket",
+  "version": "0.2.0",
+  "author": "Strategic Machines",
+  "homepage": "https://github.com/pdhoward/vuesocket",
+  "license": "MIT", 
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
