@@ -1,6 +1,5 @@
 <script>
 import axios from 'axios';
-
 import ws from '../utils/ws';
 
 export default {
@@ -21,13 +20,18 @@ export default {
     this.fetch();
 
     // Listen for new data.
-    /*
-    ws.onmessage = ({ data }) => {
+    
+    ws.onmessage = (e) => {
       console.log(`Hello from FrameLive Feed`)
-      //const message = JSON.parse(data);
-     // this[message.type.toLowerCase()](message.entity);
+      console.log(e.data)
+      const message = JSON.parse(e.data);
+      console.log(`PARSED MESSAGE`)
+      console.log(message)
+      console.log(`HERE IS THE THIS OBJECT`)
+      console.log(this)
+      this[message.type.toLowerCase()](message.entity);
     };
-    */
+  
   },
   methods: {
     add(entity) {
@@ -40,9 +44,14 @@ export default {
         return x;
       });
     },
+    hello(entity) {
+      console.log(`Hello ${entity}`)
+    },
     async fetch() {
-      const { data } = await axios.get(this.endpoint);
+      const { data } = await axios.get(this.endpoint);      
       this.entities = data;
+      console.log(`Hello from Fetch`)
+      console.log(this.entities)
     },
   },
   render() {

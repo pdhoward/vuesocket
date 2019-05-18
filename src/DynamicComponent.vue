@@ -1,8 +1,11 @@
 <template>
-  <Component
-    :is="computedComponent"
-    v-bind="props"
-  />
+ <div>
+    <Component
+      :is="computedComponent"   
+      v-bind="props"
+    />
+    {{computeComponent}}
+  </div>
 </template>
 
 <script>
@@ -22,10 +25,20 @@ export default {
   },
   data() {
     return {
-      computedComponent: null,
+      computeComponent: null,
     };
   },
-  /*
+  computed: {
+    computedComponent: function(){
+      console.log(`HELLO FROM COMPUTED IN DYNAMIC`)
+      console.log(`--- this function fired ----`)
+      this.computeComponent = () => {
+        console.log(`---and computed component fired ----`)
+        externalComponent(this.component.url)
+      }
+    }
+  }
+  /* 
   watch: {
     component: {
       immediate: true,
