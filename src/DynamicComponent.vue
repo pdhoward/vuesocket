@@ -5,6 +5,9 @@
       v-bind="props"
     />
     {{computeComponent}}
+    {{componentname}}
+    {{componenturl}}
+    {{componentcontent}}
   </div>
 </template>
 
@@ -26,16 +29,25 @@ export default {
   data() {
     return {
       computeComponent: null,
+      componentname: "",
+      componenturl: "",
+      componentcontent: "",
+      componentid: "",
+      conponentheadline: ""
     };
   },
   computed: {
     computedComponent: function(){
       console.log(`HELLO FROM COMPUTED IN DYNAMIC`)
       console.log(`--- this function fired ----`)
-      this.computeComponent = () => {
-        console.log(`---and computed component fired ----`)
-        externalComponent(this.component.url)
-      }
+      //console.log(this)
+      this.componentname = this.component.name
+      this.componenturl = this.component.url
+      this.componentcontent = this.props.content
+      //this.computeComponent = () => {
+      //  console.log(`---and computed component fired ----`)
+      //  externalComponent(this.component.url)
+      //}
     }
   }
   /* 
