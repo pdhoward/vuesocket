@@ -6,6 +6,7 @@
     />
     {{computeComponent}}
     {{componentname}}
+    {{componentid}}
     {{componenturl}}
     {{componentcontent}}
   </div>
@@ -44,6 +45,7 @@ export default {
       this.componentname = this.component.name
       this.componenturl = this.component.url
       this.componentcontent = this.props.content
+      this.componentid = this.props.id
       //this.computeComponent = () => {
       //  console.log(`---and computed component fired ----`)
       //  externalComponent(this.component.url)
