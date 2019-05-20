@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import externalComponent from './utils/external-component';
+import externalComponent from './external-component';
 
 export default {
   name: `DynamicComponent`,

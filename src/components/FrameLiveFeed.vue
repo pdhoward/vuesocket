@@ -1,5 +1,5 @@
 <script>
-import axios from 'axios';
+import axios from 'axios'
 import ws from '../utils/ws';
 
 export default {
@@ -22,12 +22,9 @@ export default {
     // Listen for new data.
     
     ws.onmessage = (e) => {
-      console.log(`Hello from FrameLive Feed`)
-      console.log(e.data)
-      const message = JSON.parse(e.data);
-      console.log(`PARSED MESSAGE`)
-      console.log(message)
-      console.log(`HERE IS THE THIS OBJECT`)
+      console.log(`HELLO FROM WEBSOCKETS IN FRAMEFEED `)      
+      const message = JSON.parse(e.data);      
+      console.log(`THIS OBJECT`)
       console.log(this)
       this[message.type.toLowerCase()](message.entity);
     };

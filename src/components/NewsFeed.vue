@@ -19,7 +19,7 @@
 
 <script>
 import DynamicComponent from './DynamicComponent.vue';
-import FrameLiveFeed from './frames/FrameLiveFeed.vue';
+import FrameLiveFeed from './FrameLiveFeed.vue';
 
 export default {
   name: `NewsFeed`,

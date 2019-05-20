@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import NewsFeed from './NewsFeed.vue';
+import NewsFeed from './components/NewsFeed.vue';
 
 export default {
   name: `App`,
