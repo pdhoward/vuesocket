@@ -1,18 +1,25 @@
 <template>
-  <div class="custom-card header-card card">
-    <div class="card-body pt-0">
+  <div >    
       <Component
           :is="setCardData"   
           v-bind="props"
-        />
-          {{tempCardData.dataObject.label}} <br/>
-          {{tempCardData.dataObject.value}} <br/>
-          {{tempCardData.dataObject.date}} <br/>
-          {{tempCardData.dataObject.headline}} <br/>
-          {{tempCardData.dataObject.url}} <br/>
-          {{tempCardData.dataObject.content}} <br/>
-
-    </div>    
+       />
+       <div class="card border-primary mb-3" style="width: 20rem;">
+       <img class="card-img-top" src="../assets/logo.png" alt="Card image cap">
+          <div class="card-body">  
+            <h5 class="card-title">
+              {{tempCardData.dataObject.label}} <br/>
+              {{tempCardData.dataObject.value}} <br/>
+              {{tempCardData.dataObject.date}} <br/>
+            </h5> 
+            <p class="card-text">
+              {{tempCardData.dataObject.headline}} <br/>
+              {{tempCardData.dataObject.url}} <br/>
+              {{tempCardData.dataObject.content}} <br/>
+            </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+      </div>
   </div>
 </template>
 
@@ -78,4 +85,9 @@ export default {
 </script>
 
 <style>
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
 </style>

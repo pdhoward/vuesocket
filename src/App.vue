@@ -1,13 +1,14 @@
 <template>
-  <div
-     class="o-container o-container--m o-vertical-spacing o-vertical-spacing--xxl"
-    :class="$style.main"
-  >
-    <h1>
+  <div class="main">
+     <h1>
       Dynamic Content
-    </h1>
-    <SwitchTheme/>
-    <NewsFeed/>
+     </h1>
+     <div > 
+        <SwitchTheme/>
+     </div>
+     <div class="card-columns">
+        <NewsFeed/> 
+    </div>   
   </div>
 </template>
 
@@ -24,28 +25,47 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import './assets/scss/generic/**/*';
-@import '{
-  .o-container,
-  .o-container--m,
-} from ~@avalanche/object-container';
-@import '{
-  .o-vertical-spacing,
-  .o-vertical-spacing--xl,
-  .o-vertical-spacing--xxl,
-} from ~@avalanche/object-vertical-spacing';
-</style>
-
-<style lang="scss" module>
-@import './assets/scss/settings/**/*';
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
 
 .main {
   padding-top: setting-spacing(xl);
   padding-bottom: setting-spacing(xl);
+  margin: auto;  
+  width: 80%;
+}
+h1 {
+  margin: 40px 0 0;
+  text-align: center;
+}
 
-  h1 {
-    text-align: center;
-  }
+.theme-tester {
+  height: 100px;
+  border-width: 20px;
+  border-style: solid;
+}
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 4;
+    }
 }
 </style>
