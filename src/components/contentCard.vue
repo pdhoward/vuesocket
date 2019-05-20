@@ -1,13 +1,34 @@
 <template>
   <div class="custom-card header-card card">
-    <div class="card-body pt-0">    
+    <div class="card-body pt-0">
+      <Component
+          :is="setCardData"   
+          v-bind="props"
+        />
+          {{tempCardData.dataObject.label}} <br/>
+          {{tempCardData.dataObject.value}} <br/>
+          {{tempCardData.dataObject.date}} <br/>
+          {{tempCardData.dataObject.headline}} <br/>
+          {{tempCardData.dataObject.url}} <br/>
+          {{tempCardData.dataObject.content}} <br/>
+
     </div>    
   </div>
 </template>
 
 <script>
 export default {
-  props: ["cardData"],
+  name: 'ContentCard',
+  props: {
+    component: {
+      required: true,
+      type: Object,
+    },
+    props: {
+      default: () => ({}),
+      type: Object,
+    }
+  },
   components: {},
   data() {
     return {
@@ -39,33 +60,23 @@ export default {
           canvasPadding: "20"
         },
         data: [],
+        dataObject: {}
       },
     };
   },
-  methods: {
-    setCardData: function() {
-      var data = [];
-      for (var i = 0; i < this.cardData.pubNow.length; i++) {
-        var dataObject = {
-          label: this.cardData.pubNow[i].label,
-          value: this.cardData.pubNow[i].value
-        };
-        data.push(dataObject);
-      }
-      this.tempCardData.data = data;
+  computed: {
+    setCardData: function() {     
+      console.log(`Hello from ContentCard`)
+     
+      this.tempCardData.dataObject.label = this.component.name
+      this.tempCardData.dataObject.url = this.component.url
+      this.tempCardData.dataObject.content = this.props.content
+      this.tempCardData.dataObject.value = this.props.id
+      this.tempCardData.dataObject.headline = this.props.headline
+      this.tempCardData.dataObject.date = this.props.date
+      console.log(this.tempCardData.dataObject)
     },
-  },
-  mounted: function() {
-    this.setCardData();
-  }, 
-  watch: {
-    cardData: {
-      handler: function() {
-        this.setCardData();                                    
-      },
-      deep: true
-    },
-  },
+  } 
 };
 </script>
 

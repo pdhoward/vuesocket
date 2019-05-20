@@ -7,8 +7,8 @@
       <li
         v-for="newsEntity in news"
         :key="newsEntity.data.id"
-      >
-        <DynamicComponent
+      >        
+        <ContentCard
           :component="newsEntity.component"
           :props="newsEntity.data"
         />
@@ -18,14 +18,14 @@
 </template>
 
 <script>
-import DynamicComponent from './DynamicComponent.vue';
 import FrameLiveFeed from './FrameLiveFeed.vue';
+import ContentCard from './ContentCard.vue';
 
 export default {
   name: `NewsFeed`,
-  components: {
-    DynamicComponent,
+  components: {   
     FrameLiveFeed,
-  },
+    ContentCard
+  } 
 };
 </script>
