@@ -6,12 +6,17 @@ ws.onopen = () => {
   }
 
 ws.onerror = error => {
-console.log(`WebSocket error: ${error}`)
+    console.log(`WebSocket error: ${error}`)
 }
 
 ws.onmessage = e => {
     console.log(`hello from ws.js`)
     console.log(e.data)
+}
+
+ws.onclose = e => {
+   console.log(`Connection closed`)
+ 
 }
 
 export default ws;

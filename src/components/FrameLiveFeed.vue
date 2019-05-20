@@ -21,11 +21,8 @@ export default {
 
     // Listen for new data.
     
-    ws.onmessage = (e) => {
-      console.log(`HELLO FROM WEBSOCKETS IN FRAMEFEED `)      
-      const message = JSON.parse(e.data);      
-      console.log(`THIS OBJECT`)
-      console.log(this)
+    ws.onmessage = (e) => {          
+      const message = JSON.parse(e.data);     
       this[message.type.toLowerCase()](message.entity);
     };
   
@@ -46,9 +43,7 @@ export default {
     },
     async fetch() {
       const { data } = await axios.get(this.endpoint);      
-      this.entities = data;
-      console.log(`Hello from Fetch`)
-      console.log(this.entities)
+      this.entities = data;     
     },
   },
   render() {

@@ -65,16 +65,13 @@ export default {
     };
   },
   computed: {
-    setCardData: function() {     
-      console.log(`Hello from ContentCard`)
-     
+    setCardData: function() {        
       this.tempCardData.dataObject.label = this.component.name
       this.tempCardData.dataObject.url = this.component.url
       this.tempCardData.dataObject.content = this.props.content
       this.tempCardData.dataObject.value = this.props.id
       this.tempCardData.dataObject.headline = this.props.headline
-      this.tempCardData.dataObject.date = this.props.date
-      console.log(this.tempCardData.dataObject)
+      this.tempCardData.dataObject.date = this.props.date     
     },
   } 
 };
