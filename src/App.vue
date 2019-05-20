@@ -1,21 +1,24 @@
 <template>
   <div
-    class="o-container o-container--m o-vertical-spacing o-vertical-spacing--xxl"
+     class="o-container o-container--m o-vertical-spacing o-vertical-spacing--xxl"
     :class="$style.main"
   >
     <h1>
       Dynamic Content
     </h1>
+    <SwitchTheme/>
     <NewsFeed/>
   </div>
 </template>
 
 <script>
+import SwitchTheme from './components/SwitchTheme.vue';
 import NewsFeed from './components/NewsFeed.vue';
 
 export default {
   name: `App`,
   components: {
+    SwitchTheme,
     NewsFeed,
   },
 };

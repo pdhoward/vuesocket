@@ -183,7 +183,7 @@ body {
 }
 
 .custom-card {
-    background-color: #FFFFFF !important;
+    background-color: rgb(250, 244, 244) !important;
     border: 0 !important;
     margin-top: 16px !important;
     margin-bottom: 20px !important;
