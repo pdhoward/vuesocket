@@ -1,7 +1,7 @@
 const ws = new WebSocket(`ws://localhost:8200/ws`);
 
 ws.onopen = () => {
-    console.log(`SOCKETS ARE LIVE`)
+    console.log(`SOCKETS ARE LIVE`)  
     ws.send('hey')
   }
 

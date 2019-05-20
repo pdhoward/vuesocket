@@ -40,7 +40,7 @@ export default {
   computed: {
     computedComponent: function(){
       console.log(`HELLO FROM COMPUTED IN DYNAMIC`)
-      console.log(`--- this function fired ----`)
+      console.log(`--- this function fired now ----`)
       //console.log(this)
       this.componentname = this.component.name
       this.componenturl = this.component.url
