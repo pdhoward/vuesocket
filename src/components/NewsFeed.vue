@@ -8,7 +8,7 @@
         v-for="newsEntity in news"
         :key="newsEntity.data.id"
       >
-        <contentcard
+        <content-card
           :component="newsEntity.component"
           :props="newsEntity.data"
         />
@@ -24,7 +24,7 @@ import ContentCard from './ContentCard.vue'
 export default {  
   components: {   
     'framelivefeed': FrameLiveFeed,
-    'contentcard': ContentCard
+    'content-card': ContentCard
   },
   data() {
     return {
