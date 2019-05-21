@@ -31,7 +31,7 @@ export default {
     return {
       endpoint: "http://localhost:8200/news",
       devendpoint: "http://localhost:8200/news",
-      prodendpoint: "https://chaptoc.ngrok.io/news"
+      prodendpoint: "https://chaotic.ngrok.io/news"
     }
   },
   methods: {
