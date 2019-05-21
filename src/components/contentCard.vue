@@ -35,8 +35,7 @@ export default {
       default: () => ({}),
       type: Object,
     }
-  },
-  components: {},
+  },  
   data() {
     return {
       tempCardData: {
