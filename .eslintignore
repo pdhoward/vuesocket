@@ -4,3 +4,4 @@ node/*.js
 src
 server
 public
+dist
