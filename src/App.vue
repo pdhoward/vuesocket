@@ -3,10 +3,10 @@
      <h1>
       Dynamic Content
      </h1>
-     <div > 
+     <div class="widget" > 
         <SwitchTheme/>
      </div>
-     <div class="card-columns">
+     <div class="card-columns feed">
         <NewsFeed/> 
     </div>   
   </div>
@@ -37,6 +37,13 @@ export default {
 h1 {
   margin: 40px 0 0;
   text-align: center;
+}
+.widget {
+ margin: 25px;
+}
+
+.feed {
+ margin: 25px
 }
 
 .theme-tester {
