@@ -29,9 +29,9 @@ export default {
 <style scoped>
 
 .main {
-  padding-top: setting-spacing(xl);
-  padding-bottom: setting-spacing(xl);
-  margin: auto;  
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: auto;
   width: 80%;
 }
 h1 {
