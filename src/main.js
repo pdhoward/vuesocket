@@ -5,7 +5,7 @@ import App from './App.vue';
 import store from "./store";
 
 Vue.config.productionTip = false;
-
+/*
 const requireComponent = require.context(  
   './components',  
   false,  
@@ -28,7 +28,7 @@ requireComponent.keys().forEach(fileName => {
     componentConfig.default || componentConfig
   )
 })
-
+*/
 new Vue({
   store,
   render: h => h(App),
