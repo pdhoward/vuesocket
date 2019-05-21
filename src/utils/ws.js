@@ -1,4 +1,13 @@
-const ws = new WebSocket(`ws://localhost:8200/ws`);
+//const ws = new WebSocket(`ws://localhost:8200/ws`);
+
+// detect mode and set endpoint
+if (process.env.NODE_ENV === 'development') {
+    console.log(`Development Mode Detected`)
+     var ws = new WebSocket(`ws://localhost:8200/ws`);
+} else {
+    console.log(`Production Mode Detected`)
+    var ws = new WebSocket(`ws://chaotic.ngrok.io/ws`);
+}
 
 ws.onopen = () => {
     console.log(`SOCKETS ARE LIVE`)  
