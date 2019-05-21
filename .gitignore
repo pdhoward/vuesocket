@@ -28,6 +28,7 @@ Thumbs.db
 # Folders to ignore
 dist/*
 node_modules
+build
 
 # Files to ignore
 *.map
