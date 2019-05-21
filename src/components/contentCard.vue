@@ -24,8 +24,7 @@
 </template>
 
 <script>
-export default {
-  name: 'ContentCard',
+export default {  
   props: {
     component: {
       required: true,

@@ -1,5 +1,5 @@
 <template>
-  <FrameLiveFeed     
+  <framelivefeed     
     v-slot="{ entities: news }"
     :endpoint="endpoint"
   >
@@ -8,24 +8,23 @@
         v-for="newsEntity in news"
         :key="newsEntity.data.id"
       >
-        <ContentCard
+        <contentcard
           :component="newsEntity.component"
           :props="newsEntity.data"
         />
       </li>
     </ul>
-  </FrameLiveFeed>
+  </framelivefeed>
 </template>
 
 <script>
 import FrameLiveFeed from './FrameLiveFeed.vue'
 import ContentCard from './ContentCard.vue'
 
-export default {
-  name: `NewsFeed`,
+export default {  
   components: {   
-    FrameLiveFeed,
-    ContentCard
+    'framelivefeed': FrameLiveFeed,
+    'contentcard': ContentCard
   },
   data() {
     return {

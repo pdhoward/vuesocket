@@ -2,8 +2,7 @@
 import axios from 'axios'
 import ws from '../utils/ws';
 
-export default {
-  name: `FrameLiveFeed`,
+export default {  
   props: {
     endpoint: {
       required: true,

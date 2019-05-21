@@ -4,10 +4,10 @@
       Dynamic Content
      </h1>
      <div class="widget" > 
-        <SwitchTheme/>
+        <switchtheme/>
      </div>
      <div class="card-columns feed">
-        <NewsFeed/> 
+        <newsfeed/> 
     </div>   
   </div>
 </template>
@@ -19,8 +19,8 @@ import NewsFeed from './components/NewsFeed.vue';
 export default {
   name: `App`,
   components: {
-    SwitchTheme,
-    NewsFeed,
+    'switchtheme': SwitchTheme,
+    'newsfeed': NewsFeed,
   },
 };
 </script>
