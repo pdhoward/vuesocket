@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === 'development') {
      var ws = new WebSocket(`ws://localhost:3100/ws`);
 } else {
     console.log(`Production Mode Detected`)
-    var ws = new WebSocket(`ws://chaotic.ngrok.io/ws`);
+    var ws = new WebSocket(`wss://chaotic.ngrok.io/ws`);
 }
 
 ws.onopen = () => {
