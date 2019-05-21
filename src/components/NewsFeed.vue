@@ -8,7 +8,7 @@
         v-for="newsEntity in news"
         :key="newsEntity.data.id"
       >
-        <content-card
+        <content-file
           :component="newsEntity.component"
           :props="newsEntity.data"
         />
@@ -19,12 +19,12 @@
 
 <script>
 import FrameLiveFeed from './FrameLiveFeed.vue'
-import ContentCard from './ContentCard.vue'
+import ContentFile from './ContentFile.vue'
 
 export default {  
   components: {   
     'framelivefeed': FrameLiveFeed,
-    'content-card': ContentCard
+    'content-file': ContentFile
   },
   data() {
     return {
