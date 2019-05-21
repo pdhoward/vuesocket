@@ -1,5 +1,5 @@
 <template>
-  <div >    
+  <div >
       <Component
           :is="setCardData"   
           v-bind="props"
