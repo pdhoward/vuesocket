@@ -1,8 +1,7 @@
 module.exports = {
   root: true,
   extends: [
-    `plugin:vue/recommended`,
-    `@avalanche/eslint-config`,
+    `plugin:vue/recommended`,    
   ],
   rules: {
     'no-console': process.env.NODE_ENV === `production` ? `error` : `warn`,
