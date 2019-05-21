@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import FrameLiveFeed from './FrameLiveFeed.vue'
-import ContentCard from './ContentCard.vue'
+import FrameLiveFeed from './framelivefeed.vue'
+import ContentCard from './contentcard.vue'
 
 export default {  
   components: {   

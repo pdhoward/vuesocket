@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import SwitchTheme from './components/SwitchTheme.vue';
-import NewsFeed from './components/NewsFeed.vue';
+import SwitchTheme from './components/switchtheme.vue';
+import NewsFeed from './components/newsfeed.vue';
 
 export default {
   name: `App`,
