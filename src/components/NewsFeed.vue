@@ -29,8 +29,8 @@ export default {
   },
   data() {
     return {
-      endpoint: "http://localhost:8200/news",
-      devendpoint: "http://localhost:8200/news",
+      endpoint: "http://localhost:3100/news",
+      devendpoint: "http://localhost:3100/news",
       prodendpoint: "https://chaotic.ngrok.io/news"
     }
   },

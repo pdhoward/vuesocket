@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+
+
+body {
+    font-family: Roboto;
+    font-weight: 400;
+    width: 100%;
+    margin: 0;   
+}
+
+.custom-card {
+    background-color: rgb(117, 115, 115) !important;
+    border: 0 !important;
+    margin-top: 16px !important;
+    margin-bottom: 20px !important;
+}
+
+.custom-content-card {
+    background-color: #FFFFFF !important;
+    border: 0 !important;
+    margin-top: 16px !important;
+    margin-bottom: 0px !important;
+}
+
+.header-card {
+    height: 50vh;
+}
+
+.content-card {
+    height: 43vh;
+}
+
+.card-divider {
+    margin-top: 0;
+}
+
+.content-header {
+    color: #8786A4;
+    font-size: 1.4rem;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 15px 10px 5px 15px;
+}
+.highlights-item {
+    min-height: 37vh;
+    max-height: 38vh;
+    background-color: #FFFFFF;
+}
+.card-heading {
+    color: rgb(33, 34, 68);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+}
+
+.card-sub-heading {
+    color: #73748C;
+    font-size: 1.6rem;
+    line-height: 19px;
+}
+
+.card-value {
+    color: #000000;
+    font-size: 1.8rem;
+    line-height: 21px;
+}
+
+span text {
+    font-weight: 500 !important;
+}
+
+hr {
+    padding-top: 1.5px;
+    padding-bottom: 1px;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 0.5px;
+}

@@ -3,7 +3,7 @@
 // detect mode and set endpoint
 if (process.env.NODE_ENV === 'development') {
     console.log(`Development Mode Detected`)
-     var ws = new WebSocket(`ws://localhost:8200/ws`);
+     var ws = new WebSocket(`ws://localhost:3100/ws`);
 } else {
     console.log(`Production Mode Detected`)
     var ws = new WebSocket(`ws://chaotic.ngrok.io/ws`);
