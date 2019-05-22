@@ -1,30 +1,39 @@
 /* eslint-disable no-console */
-self.addEventListener('install', function(event) {
-  console.log('[Service Worker] Installing Service Worker ...', event);
-  event.waitUntil(
-    caches.open('static').then(function(cache) {
-      cache.addAll(['/', '/index.html', '/app.js', '/manifest.json']);
-    })
-  );
+
+workbox.setConfig({
+  debug: false,
 });
 
-self.addEventListener('activate', function(event) {
-  console.log('[Service Worker] Activating Service Worker ....', event);
-});
+workbox.precaching.precacheAndRoute([]);
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      if (response) {
-        return response;
-      } else {
-        return fetch(event.request).then(function(res) {
-          return caches.open('dynamic').then(function(cache) {
-            cache.put(event.request.url, res.clone());
-            return res;
-          });
-        });
-      }
-    })
-  );
-});
+workbox.routing.registerRoute(
+  /\.(?:png|gif|jpg|jpeg|svg)$/,
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'images',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
+    ],
+  }),
+);
+
+workbox.routing.registerRoute(
+  new RegExp('https://newsapi.org/v2/top-headlines(.*)'),
+  workbox.strategies.networkFirst({
+    cacheName: 'news-api',
+  }),
+);
+
+workbox.routing.registerRoute(
+  new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
+  workbox.strategies.cacheFirst({
+    cacheName: 'googleapis',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 30,
+      }),
+    ],
+  }),
+);
