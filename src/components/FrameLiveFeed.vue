@@ -41,7 +41,7 @@ export default {
       console.log(`Hello ${entity}`)
     },
     async fetch() {
-      const { data } = await axios.get(this.endpoint);      
+      const { data } = await axios.get(this.endpoint);           
       this.entities = data;     
     },
   },

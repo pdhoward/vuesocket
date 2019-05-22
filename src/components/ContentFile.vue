@@ -14,7 +14,6 @@
             </h5> 
             <p class="card-text">
               {{tempCardData.dataObject.headline}} <br/>
-              {{tempCardData.dataObject.url}} <br/>
               {{tempCardData.dataObject.content}} <br/>
             </p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -28,11 +27,11 @@ export default {
   props: {
     component: {
       required: true,
-      type: Object,
+      type: Array,
     },
     props: {
-      default: () => ({}),
-      type: Object,
+      default: () => ([]),
+      type: Array,
     }
   },  
   data() {
@@ -70,13 +69,15 @@ export default {
     };
   },
   computed: {
-    setCardData: function() {        
-      this.tempCardData.dataObject.label = this.component.name
-      this.tempCardData.dataObject.url = this.component.url
-      this.tempCardData.dataObject.content = this.props.content
-      this.tempCardData.dataObject.value = this.props.id
-      this.tempCardData.dataObject.headline = this.props.headline
-      this.tempCardData.dataObject.date = this.props.date     
+    setCardData: function() {
+      console.log(this.props)
+      let e = this.component[0] 
+      let c = this.props[0]
+      console.log(c)
+      this.tempCardData.dataObject.content = c.content
+      this.tempCardData.dataObject.value = c.id
+      this.tempCardData.dataObject.headline = c.headline
+      this.tempCardData.dataObject.date = c.date     
     },
   } 
 };

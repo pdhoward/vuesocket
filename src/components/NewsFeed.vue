@@ -6,11 +6,11 @@
     <ul >
       <li
         v-for="newsEntity in news"
-        :key="newsEntity.data.id"
+        :key="newsEntity.Content[0].id"
       >
         <content-file
-          :component="newsEntity.component"
-          :props="newsEntity.data"
+          :component="newsEntity.Experiences"
+          :props="newsEntity.Content"
         />
       </li>
     </ul>
