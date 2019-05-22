@@ -6,7 +6,7 @@
      <div class="widget" > 
         <switch-theme/>
      </div>
-     <div class="card-columns feed">
+     <div class="feed">
         <news-feed/> 
     </div>   
   </div>
@@ -42,8 +42,9 @@ h1 {
  margin: 25px;
 }
 
-.feed {
- margin: 25px
+.feed { 
+ margin: auto;
+ width: 30%;
 }
 
 .theme-tester {
