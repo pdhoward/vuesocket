@@ -3,17 +3,19 @@
     v-slot="{ entities: news }"
     :endpoint="endpoint"
   >
-    <ul >
-      <li
-        v-for="newsEntity in news"
-        :key="newsEntity.Content[0].id"
-      >
-        <content-file
-          :component="newsEntity.Experiences"
-          :props="newsEntity.Content"
-        />
-      </li>
-    </ul>
+      <div> 
+        <ul >
+          <li
+            v-for="newsEntity in news"
+            :key="newsEntity.Content[0].id"
+          >
+            <content-file
+              :component="newsEntity.Experiences"
+              :props="newsEntity.Content"
+            />
+          </li>
+        </ul>
+      </div>
   </framelivefeed>
 </template>
 
@@ -52,7 +54,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  ul { 
-    list-style: none; 
-  }
+
+ul {
+  padding: 0;
+  margin: 25px 50px 25px;
+  list-style: none; 
+}
 </style>

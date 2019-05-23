@@ -1,13 +1,14 @@
 <template>
-  <div >
+  <div class="mx-auto" >
       <Component
           :is="setCardData"   
           v-bind="props"
        />       
-       <div class="card mb-3" 
-            style="width: 20rem;" 
+       <div class="card mb-3"              
             :class="[primary, secondary]">
-       <img class="card-img-top" src="../assets/logo.png" alt="Card image cap">
+          <img class="card-img-top" 
+               src="../assets/logo.png" 
+               alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">
               {{tempCardData.dataObject.label}} <br/>
@@ -101,6 +102,7 @@ export default {
 </script>
 
 <style>
+
 .card-img-top {
     width: 100%;
     height: 10vw;
