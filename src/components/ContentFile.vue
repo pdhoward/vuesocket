@@ -77,10 +77,12 @@ export default {
   methods: mapMutations(['switchTheme']),
   computed: {
     setCardData: function() {
-      console.log(this.props)
+      console.log(`Value of Data Object`)
       let e = this.component[0] 
       let c = this.props[0]
+      console.log(e)
       console.log(c)
+      this.switchTheme(e.theme)
       this.tempCardData.dataObject.content = c.content
       this.tempCardData.dataObject.value = c.id
       this.tempCardData.dataObject.headline = c.headline
