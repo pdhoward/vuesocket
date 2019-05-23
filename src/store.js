@@ -1,16 +1,15 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import { THEME } from "./constants";
-import red from "./themes/red";
-import blue from "./themes/blue";
-import primary from "./themes/primary";
-import success from "./themes/success";
+import Vue from "vue"
+import Vuex from "vuex"
+import { THEME } from "./constants"
+import theme from './themes'
+/*
 const theme = {
   red,
   blue,
   primary,
   success
 };
+*/
 
 const defaultTheme = THEME.success;
 
