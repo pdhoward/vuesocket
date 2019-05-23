@@ -3,10 +3,12 @@
       <Component
           :is="setCardData"   
           v-bind="props"
-       />
-       <div class="card border-primary mb-3" style="width: 20rem;">
+       />       
+       <div class="card mb-3" 
+            style="width: 20rem;" 
+            :class="[primary, secondary]">
        <img class="card-img-top" src="../assets/logo.png" alt="Card image cap">
-          <div class="card-body">  
+          <div class="card-body">
             <h5 class="card-title">
               {{tempCardData.dataObject.label}} <br/>
               {{tempCardData.dataObject.value}} <br/>
@@ -23,7 +25,8 @@
 </template>
 
 <script>
-export default {  
+import { mapState, mapMutations } from 'vuex'
+export default {
   props: {
     component: {
       required: true,
@@ -63,11 +66,15 @@ export default {
           slantLabels: "1",
           canvasPadding: "20"
         },
+        theme: {
+
+        },
         data: [],
         dataObject: {}
       },
     };
-  },
+  },   
+  methods: mapMutations(['switchTheme']),
   computed: {
     setCardData: function() {
       console.log(this.props)
@@ -78,9 +85,17 @@ export default {
       this.tempCardData.dataObject.value = c.id
       this.tempCardData.dataObject.headline = c.headline
       this.tempCardData.dataObject.date = c.date     
-    },
-  } 
-};
+    },    
+    ...mapState(['themeName', 'primary', 'secondary']),    
+  },
+  created(){
+    console.log(`Store State`)  
+    console.log(this.$store.state.themeName);
+    console.log(this.$store.state.primary);
+    console.log(this.$store.state.secondary);
+   },
+   
+}
 </script>
 
 <style>

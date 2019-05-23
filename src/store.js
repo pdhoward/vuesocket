@@ -3,12 +3,16 @@ import Vuex from "vuex";
 import { THEME } from "./constants";
 import red from "./themes/red";
 import blue from "./themes/blue";
+import primary from "./themes/primary";
+import success from "./themes/success";
 const theme = {
   red,
-  blue
+  blue,
+  primary,
+  success
 };
 
-const defaultTheme = THEME.blue;
+const defaultTheme = THEME.success;
 
 Vue.use(Vuex);
 
