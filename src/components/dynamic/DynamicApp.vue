@@ -7,7 +7,7 @@
         <ul >
           <li
             v-for="newsEntity in news"
-            :key="newsEntity.Content[0].id"
+            :key="newsEntity.MsgId"
           >
             <dynamic-content
               :component="newsEntity.Experiences"

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import ContentDynamic from './views/dynamic/ContentDynamic.vue'
 
 Vue.use(Router)
 
@@ -23,11 +24,8 @@ export default new Router({
         },
         {
             path: '/dynamic',
-            name: 'dynamic',
-            // route level code-splitting
-            // this generates a separate chunk (about.[hash].js) for this route
-            // which is lazy-loaded when the route is visited.
-            component: () => import(/* webpackChunkName: "about" */ './views/dynamic/ContentDynamic.vue')
+            name: 'dynamic',            
+            component: ContentDynamic
         },
         {
             path: '/about',

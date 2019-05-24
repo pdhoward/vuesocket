@@ -14,20 +14,19 @@ export default {
       entities: [],
     };
   },
-  created() {    
-
-    // Listen for new data.
-    
+  created() {  
     ws.onmessage = (e) => {          
       const message = JSON.parse(e.data);     
       this[message.type.toLowerCase()](message.entity);
-    };
-  
+    };  
   },
   methods: {
-    add(entity) {
-      if (this.entities.find(x => x.data.id === entity.data.id)) return;
-      this.entities = [entity, ...this.entities];
+    add(entityArr) {
+      let entity = [...entityArr]
+      console.log(entity)
+     // if (this.entities.find(x => x.data.id === entity.data.id)) return;
+     // this.entities = [entity, ...this.entities];
+     this.entities = [...entity]
     },
     update(entity) {
       this.entities = this.entities.map((x) => {
