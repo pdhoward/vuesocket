@@ -1,8 +1,9 @@
 <template>
     <div class="home">
-        <!-- <img alt="Vue logo" :src="image"> -->
-        <img alt="Vue logo" src="../assets/logo.png">
+        <!-- remove comments for notification test -->
+        <img alt="SM logo" src="../assets/logo.png">
         <br>
+        <!--
         <button v-if="notificationsSupported" @click="toggleSubscription" :disabled="buttonDisabled">{{ (notificationsEnabled ? 'Disable' : 'Enable') }} notifications <i class="fa fa-caret-right" aria-hidden="true"></i></button>
         <div v-if="notificationsEnabled">
             <br>
@@ -10,6 +11,7 @@
             <br>
             <button @click="createPushNotification" :disabled="pushButtonDisabled"><i class="fa fa-comment" aria-hidden="true"></i> Notify with Push</button>
         </div>
+        -->
     </div>
 </template>
 
