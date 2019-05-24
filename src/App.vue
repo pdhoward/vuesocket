@@ -2,14 +2,14 @@
 <div>
   <div id="app">
         <div id="nav">
-            <router-link to="/">Home</router-link>
-            <router-link to="/content">Content</router-link>|
+            <router-link to="/">Home</router-link> |
+            <router-link to="/content">Content</router-link> |
             <router-link to="/about">About</router-link>
         </div>
         <button id="refresh-button" v-if="updateExists" @click="refreshApp"><i class="fa fa-refresh"></i> Click to update!</button>
         <div v-show="showMessage" id="notification">
             <p>
-                This demo reflects the code from <a href="https://github.com/pdhoward/vuesocket" target="_blank">this repository</a>. The corresponding post will be available on our blog soon <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>.
+                Get the code from <a href="https://github.com/pdhoward/vuesocket" target="_blank">this repository</a>. <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>.
             </p>
             <button type="button" @click="hideMessage"><i class="fa fa-times"></i></button>
         </div>
