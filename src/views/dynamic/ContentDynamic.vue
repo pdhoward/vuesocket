@@ -2,18 +2,18 @@
     <div class="container">
      <div class="row">        
         <div class="col" style="width:70%; margin: 0 auto;">
-          <news-feed/>
+          <dynamic-app/>
         </div>        
       </div>       
     </div>
 </template>
 <script>
-import NewsFeed from '../../components/dynamic/NewsFeed.vue';
+import DynamicApp from '../../components/dynamic/DynamicApp.vue';
 
 export default {
   name: `ContentDynamic`,
   components: {    
-    'news-feed': NewsFeed,
+    'dynamic-app': DynamicApp,
   }
 }
 </script>

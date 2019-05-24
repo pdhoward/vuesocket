@@ -1,5 +1,5 @@
 <template>
-  <framelivefeed     
+  <dynamicfeed     
     v-slot="{ entities: news }"
     :endpoint="endpoint"
   >
@@ -9,24 +9,24 @@
             v-for="newsEntity in news"
             :key="newsEntity.Content[0].id"
           >
-            <content-file
+            <dynamic-content
               :component="newsEntity.Experiences"
               :props="newsEntity.Content"
             />
           </li>
         </ul>
       </div>
-  </framelivefeed>
+  </dynamicfeed>
 </template>
 
 <script>
-import FrameLiveFeed from './FrameLiveFeed.vue'
-import ContentFile from './ContentFile.vue'
+import DynamicFeed from './DynamicFeed.vue'
+import DynamicContent from './DynamicContent.vue'
 
 export default {  
   components: {   
-    'framelivefeed': FrameLiveFeed,
-    'content-file': ContentFile
+    'dynamicfeed': DynamicFeed,
+    'dynamic-content': DynamicContent
   },
   data() {
     return {
