@@ -1,5 +1,5 @@
 <script>
-import axios from 'axios'
+
 import ws from '../../utils/ws';
 
 export default {  
@@ -14,9 +14,7 @@ export default {
       entities: [],
     };
   },
-  created() {
-    // Fetch initial data.
-    this.fetch();
+  created() {    
 
     // Listen for new data.
     
@@ -36,14 +34,7 @@ export default {
         if (x.data.id === entity.data.id) return entity;
         return x;
       });
-    },
-    hello(entity) {
-      console.log(`Hello ${entity}`)
-    },
-    async fetch() {
-      const { data } = await axios.get(this.endpoint);           
-      this.entities = data;     
-    },
+    },    
   },
   render() {
     return this.$scopedSlots.default({
