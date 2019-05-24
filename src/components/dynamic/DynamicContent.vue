@@ -7,7 +7,7 @@
        <div class="card mb-3"              
             :class="[primary, secondary]">
           <img class="card-img-top" 
-               src="../../assets/logo.png" 
+               src="../../assets/logo.png"
                alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">

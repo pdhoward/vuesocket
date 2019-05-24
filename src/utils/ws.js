@@ -1,4 +1,3 @@
-//const ws = new WebSocket(`ws://localhost:8200/ws`);
 
 // detect mode and set endpoint
 if (process.env.NODE_ENV === 'development') {
