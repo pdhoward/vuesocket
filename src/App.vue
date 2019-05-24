@@ -7,7 +7,7 @@
             <router-link to="/dynamic">Dynamic</router-link> |
             <router-link to="/about">About</router-link>
         </div>
-        <button id="refresh-button" v-if="updateExists" @click="refreshApp"><i class="fa fa-refresh"></i> Click to update!</button>
+        <button id="refresh-button" v-if="updateExists" @click="refreshApp"><i class="fa fa-refresh"></i> Click to refresh!</button>
         <div v-show="showMessage" id="notification">
             <p>
                 Get the code from <a href="https://github.com/pdhoward/vuesocket" target="_blank">this repository</a>. <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>.
