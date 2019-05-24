@@ -2,18 +2,18 @@
     <div class="container">
      <div class="row">        
         <div class="col" style="width:70%; margin: 0 auto;">
-          <news-feed/>
+          <static-app/>
         </div>        
       </div>       
     </div>
 </template>
 <script>
-import NewsFeed from '../../components/static/NewsFeed.vue';
+import StaticApp from '../../components/static/StaticApp.vue';
 
 export default {
   name: `ContentStatic`,
   components: {    
-    'news-feed': NewsFeed,
+    'static-app': StaticApp,
   }
 }
 </script>
