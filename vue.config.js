@@ -14,10 +14,13 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: 'black',
     // configure the workbox plugin
     workboxPluginMode: 'InjectManifest',
-    workboxOptions: {
-      // swSrc is required in InjectManifest mode.
+    workboxOptions: {      
       swSrc: 'src/service-worker.js',
-      // ...other Workbox options...
+      exclude: [
+        /\.map$/, 
+        /manifest\.json$/ 
+      ],
+      themeColor: '#1da025'      
     },
     manifestPath: './public/manifest.json',
     iconPaths: {

@@ -31,6 +31,7 @@ node_modules
 dist
 
 # Files to ignore
+
 *.map
 *.min.js
 !public/components/**/*.min.js
