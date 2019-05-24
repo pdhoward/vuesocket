@@ -22,4 +22,7 @@ npm run build
 
 ### License
 
+## Enable Firebase Local for Notifications
+https://medium.com/@n11sh1/how-to-build-pwa-w-vue-cli-3-service-workers-add-to-home-screen-push-notifications-b519c49e142d
+
 MIT

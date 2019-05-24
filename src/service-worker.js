@@ -75,10 +75,10 @@ self.addEventListener('push', (e) => {
 
   const options = {
       body: data.body,
-      icon: '/img/icons/android-chrome-192x192.png',
+      icon: '/img/icons/icon-192x192.png',
       image: '/img/autumn-forest.png',
       vibrate: [300, 200, 300],
-      badge: '/img/icons/plint-badge-96x96.png',
+      badge: '/img/icons/icon-96x96.png',
   }
 
   e.waitUntil(self.registration.showNotification(data.title, options))

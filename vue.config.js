@@ -19,8 +19,7 @@ module.exports = {
       exclude: [
         /\.map$/, 
         /manifest\.json$/ 
-      ],
-      themeColor: '#1da025'      
+      ],          
     },
     manifestPath: './public/manifest.json',
     iconPaths: {
