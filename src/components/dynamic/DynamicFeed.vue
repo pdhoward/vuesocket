@@ -15,10 +15,10 @@ export default {
     };
   },
   created() {  
-    ws.onmessage = (e) => {          
+    ws.on('message', (e) => {          
       const message = JSON.parse(e.data);     
       this[message.type.toLowerCase()](message.entity);
-    };  
+    }) 
   },
   methods: {
     add(entityArr) {
