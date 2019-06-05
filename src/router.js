@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import ContentDynamic from './views/dynamic/ContentDynamic.vue'
+import Test from './views/test/Test.vue'
 
 Vue.use(Router)
 
@@ -26,6 +27,11 @@ export default new Router({
             path: '/dynamic',
             name: 'dynamic',            
             component: ContentDynamic
+        },
+        {
+            path: '/test',
+            name: 'test',            
+            component: Test
         },
         {
             path: '/about',

@@ -19,8 +19,7 @@ export default {
     ws.on('broadcast', (e) => {
       console.log(`MESSAGE RECEIVED`)
       console.log(e)
-      const message = JSON.parse(e);
-      //const message = e
+      const message = JSON.parse(e);      
       this[message.type.toLowerCase()](message.entity);
     }) 
   },
