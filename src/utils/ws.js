@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 ws.on('connect', () => {
-    console.log(`SOCKETS ARE LIVE ${e}`)  
+    console.log(`SOCKETS ARE LIVE`)  
     ws.emit('test', {'msg': 'Hello World'})
   })
 

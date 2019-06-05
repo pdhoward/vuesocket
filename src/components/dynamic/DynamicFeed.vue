@@ -15,8 +15,11 @@ export default {
     };
   },
   created() {  
-    ws.on('message', (e) => {          
-      const message = JSON.parse(e.data);     
+    ws.on('message', (e) => {
+      console.log(`MESSAGE RECEIVED`)
+      console.log(e)
+      const message = JSON.parse(e);
+      //const message = e
       this[message.type.toLowerCase()](message.entity);
     }) 
   },
