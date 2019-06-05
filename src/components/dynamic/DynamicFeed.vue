@@ -15,7 +15,8 @@ export default {
     };
   },
   created() {  
-    ws.on('message', (e) => {
+    //ws.on('message', (e) => {
+    ws.on('broadcast', (e) => {
       console.log(`MESSAGE RECEIVED`)
       console.log(e)
       const message = JSON.parse(e);
