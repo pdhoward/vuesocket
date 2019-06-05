@@ -2,10 +2,10 @@ import io from 'socket.io-client'
 // detect mode and set endpoint
 if (process.env.NODE_ENV === 'development') {
     console.log(`Development Mode Detected`)
-     var ws = io.connect(`ws://localhost:3100/ws`);
+     var ws = io.connect(`http://localhost:3100`);
 } else {
     console.log(`Production Mode Detected`)
-    var ws = io.connect(`wss://chaotic.ngrok.io/ws`);
+    var ws = io.connect(`https://chaotic.ngrok.io`);
 }
 
 ws.on('connect', () => {
