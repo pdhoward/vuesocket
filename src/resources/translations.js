@@ -5,7 +5,7 @@ export default {
       lastName: "Last name",
       email: "Email",
       cell: "Cell Phone Number",
-      terms: "I accept the terms and conditions",
+      terms: "Alert me via sms when tests begin",
       type: "Select Streaming Test Interval",
       additionalInfo: "Additional info",
       submitted: "The form is submitted!",
