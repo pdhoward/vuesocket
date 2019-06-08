@@ -78,17 +78,19 @@ export default {
   methods: mapMutations(['switchTheme']),
   computed: {
     setCardData: function() {
-      console.log(`Value of Data Object`)
+      
       let e = this.component[0] 
       let c = this.props[0]
+      
+      console.log(`Value of Data Object`)
       console.log(e)
       console.log(c)
       this.switchTheme(e.theme)
-      this.tempCardData.dataObject.content = c.content
-      this.tempCardData.dataObject.value = c.id
-      this.tempCardData.dataObject.headline = c.headline
-      this.tempCardData.dataObject.date = c.date     
-    },    
+      this.tempCardData.dataObject.content = c.data.content
+      this.tempCardData.dataObject.value = c.data.id
+      this.tempCardData.dataObject.headline = c.data.headline
+      this.tempCardData.dataObject.date = c.data.date
+    },
     ...mapState(['themeName', 'primary', 'secondary']),    
   },
   created(){
