@@ -1,5 +1,11 @@
 # Vue Socket - Dynamic Content Distribution
 
+Experiment to test dynamic configuration of vue components 
+
+The vue client connects with the server through sockets, and responds to a json object which is randomly configured and emitted on the server.
+
+s
+
 ## Build Setup
 
 ```bash
