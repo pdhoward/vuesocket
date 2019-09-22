@@ -5,7 +5,7 @@
   "homepage": "https://github.com/pdhoward/vuesocket",
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve --client-log-level none",
+    "start": "vue-cli-service serve --client-log-level none",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
